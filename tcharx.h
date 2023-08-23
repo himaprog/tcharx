@@ -9,6 +9,8 @@
 *       2020, himaprog
 *
 * Copyright (c) 2020 himaprog
+* Released under the MIT license
+* https://opensource.org/licenses/mit-license.php
 *
 ***/
 
@@ -74,14 +76,14 @@
 #define _istcsymf_l     __iswcsymf_l
 	
 /* CRT: memory */
-/* Most memory functions are faster with the char version. */
-#define _tmemchr                        wmemchr
-#define _tmemcmp(dst, src, cnt)         memcmp(dst, src, cnt*sizeof(wchar_t))
-#define _tmemcpy(dst, src, cnt)         memcpy(dst, src, cnt*sizeof(wchar_t))
-#define _tmemcpy_s(dst, noe, src, cnt)  memcpy_s(dst, noe*sizeof(wchar_t), src, cnt*sizeof(wchar_t))
-#define _tmemmove(dst, src, cnt)        memmove(dst, src, cnt*sizeof(wchar_t))
-#define _tmemmove_s(dst, noe, src, cnt) memmove_s(dst, noe*sizeof(wchar_t), src, cnt*sizeof(wchar_t))
-#define _tmemset(buf, ch, cnt)          memset(buf, ch, cnt*sizeof(wchar_t))
+#define _tmemchr        wmemchr
+#define _tmemcmp        wmemcmp
+#define _tmemcpy        wmemcpy
+#define _tmemcpy_s      wmemcpy_s
+#define _tmemmove       wmemmove
+#define _tmemmove_s     wmemmove_s
+#define _tmemset        wmemset
+
 
 #else   /* _UNICODE */
 
